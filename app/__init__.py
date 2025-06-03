@@ -8,8 +8,8 @@ import os
 
 # Load Turso environment variables from the .env file
 load_dotenv()
-TURSO_URL = os.getenv("TURSO_URL")
-TURSO_KEY = os.getenv("TURSO_KEY")
+TURSO_URL = os.getenv https://things-waimea-wmbutler.aws-ap-northeast-1.turso.io
+TURSO_KEY = os.getenv eyJhbGciOiJFZERTQSIsInR5cCI6IkpXVCJ9.eyJhIjoicnciLCJpYXQiOjE3NDg1NzkyMzcsImlkIjoiMTg3MzU5ZDktNTgwYy00MTA1LTliNmItMjZiNzMyMzQwMTk3IiwicmlkIjoiOTc1NjY4MzUtMWJiMS00OTBkLWI1NmUtYzcwNjg3Zjc5NThkIn0.H2dVQXhnzkXXR8t6EPm3t3UVn-edwVFiGJ1gPxTtbaFkhhxI-cVq2LGO9hT0lIhPpocefW13fv3-7RAFpw7dCw
 
 # Create the Flask app
 app = Flask(__name__)
@@ -35,7 +35,6 @@ def connect_db():
 def home():
     client = connect_db()
     result = client.execute("SELECT * FROM things")
-
     print(result.rows)
 
     return render_template("pages/home.jinja")
